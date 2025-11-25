@@ -27,7 +27,6 @@ header {
   cursor: pointer;
   appearance: none;
   padding: 0 13px;
-  
 }
 
 .header__title {
@@ -251,9 +250,14 @@ footer {
 .page {
   background-size: cover;
   background-position: center;
-  background-image: var(--bg-image);
   background-attachment: fixed;
   margin: 0 auto;
+  background-image: var(--bg-image);
+  block-size: 100vh;
+}
+
+header, main, footer {
+  background: inherit;
 }
 
 .decorated-zone::before,
@@ -339,7 +343,7 @@ footer {
 
 }
     
-@media (max-width: 376px) {
+@media (max-width: 500px) {
   :root {
     --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
@@ -424,5 +428,5 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: center;
-  } 
+  }
 }

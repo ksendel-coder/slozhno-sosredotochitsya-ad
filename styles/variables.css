@@ -3,5 +3,17 @@
   --main-font-size: 18px;
   --main-line-height: 23.4px;
   --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  
+  /* ТОЛЬКО КОНСТАНТЫ цветов */
+  --color-dark-decor: #FF0070;
+  --color-dark-bg: #000028;
+  --color-dark-text: #F1B2CE;
+  --color-dark-title: #DB00FF;
+  
+  --color-light-decor: #353430;
+  --color-light-bg: #FFF1F7;
+  --color-light-text: #353430;
+  --color-light-title: #FFC2E6;
+  --color-light-accent: #FF8DCB;
+  --shadow-color: #FF0070; /* добавить эту переменную */
 }
-

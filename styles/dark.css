@@ -1,29 +1,23 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  --color-decor: #FF0070;
-  --text-color-primary: #000028;
-  --title-color-primary: #DB00FF;
-  --bg-color: #000028;
-  --paragraph-text-color: #F1B2CE;
-  --text-block-border: #F1B2CE;
-  --decorated-zone: #FF0070;
+  --color-decor: var(--color-dark-decor);
+  --text-color-primary: var(--color-dark-bg);
+  --title-color-primary: var(--color-dark-title);
+  --bg-color: var(--color-dark-bg);
+  --paragraph-text-color: var(--color-dark-text);
+  --text-block-border: var(--color-dark-text);
+  --decorated-zone: var(--color-dark-decor);
   --bg-image: url('../images/cover-image-dark.png');
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not(.theme-light) {
-  --color-decor: #FF0070;
-    --text-color-primary: #000028;
-    --title-color-primary: #DB00FF;
-    --bg-color: #000028;
-    --paragraph-text-color: #F1B2CE;
-    --text-block-border: #F1B2CE;
-    --decorated-zone: #FF0070;
+  :root {
+    --color-decor: var(--color-dark-decor);
+    --text-color-primary: var(--color-dark-bg);
+    --title-color-primary: var(--color-dark-title);
+    --bg-color: var(--color-dark-bg);
+    --paragraph-text-color: var(--color-dark-text);
+    --text-block-border: var(--color-dark-text);
+    --decorated-zone: var(--color-dark-decor);
     --bg-image: url('../images/cover-image-dark.png');
   }
 }

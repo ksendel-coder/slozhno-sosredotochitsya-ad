@@ -1,23 +1,43 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  --color-decor: #FF8DCB;
-  --text-color-primary: #353430;
-  --title-color-primary: #FFC2E6;
-  --bg-color: #F1B2CE;
-  --paragraph-text-color: #353430;
-  --text-block-border: #353430;
+  --color-decor: var(--color-light-decor);
+  --text-color-primary: var(--color-light-text);
+  --title-color-primary: var(--color-light-title);
+  --bg-color: var(--color-light-bg);
+  --paragraph-text-color: var(--color-light-text);
+  --text-block-border: var(--color-light-decor);
+  --decorated-zone: var(--color-light-decor);
   --bg-image: url('../images/cover-image-light.png');
-  --decorated-zone: #353430;
+  --header-shadow-color: var(--color-light-accent);
+  --footer-shadow-color: var(--color-dark-decor);
 }
 
-.theme-light .content__title, 
+/* Переопределение цветов для светлой темы */
+.theme-light .content__title,
 .theme-light .header__theme-menu-button {
-  --color-decor: #353430;
+  --color-decor: var(--color-light-decor);
+}
+
+.theme-light .header__text,
+.theme-light .text-block__head {
+  --text-color-primary: var(--color-light-text);
+}
+
+.theme-light .title-decor {
+  background-color: var(--color-light-accent);
+}
+
+.theme-light .text-block__link {
+  text-shadow: 2px 2px 0 var(--color-light-accent);
+}
+
+.theme-light .header__title {
+  --title-color-primary: var(--color-light-title);
+  text-shadow: 4px 4px 0 var(--header-shadow-color);
+}
+
+.theme-light .footer__title {
+  --title-color-primary: var(--color-light-title);
+  text-shadow: 2px 2px 0 var(--footer-shadow-color);
 }
 
 .theme-light .header__rec {
@@ -28,29 +48,52 @@
   display: none;
 }
 
-.theme-light footer {
-  --color-decor: #FF0070;
-}
-
 .theme-light .header__theme-menu-button:hover {
-  --header-hover-color: rgba(50, 49, 45, 0.4);
-  border: 1px solid var(--header-hover-color);
-}
-
-.theme-light .content__title {
-  color: var(--text-color-primary);
-}
-.theme-light .page {
-  --bg-image: url('../images/cover-image-light.png');
+  border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-decor: #FF8DCB;
-    --text-color-primary: #353430;
-    --title-color-primary: #FFC2E6;
-    --bg-color: #FFF1F7;
-    --paragraph-text-color: #353430;
+    --color-decor: var(--color-light-decor);
+    --text-color-primary: var(--color-light-text);
+    --title-color-primary: var(--color-light-title);
+    --bg-color: var(--color-light-bg);
+    --paragraph-text-color: var(--color-light-text);
+    --text-block-border: var(--color-light-decor);
+    --decorated-zone: var(--color-light-decor);
     --bg-image: url('../images/cover-image-light.png');
+    --header-shadow-color: var(--color-light-accent);
+    --footer-shadow-color: var(--color-dark-decor);
+  }
+  
+  .header__rec {
+    display: none;
+  }
+  
+  .header__rec::after {
+    display: none;
+  }
+}
+
+/* Для мобильных устройств - одинаковые тени */
+@media (max-width: 768px) {
+  .theme-light .header__title,
+  .theme-light .footer__title {
+    text-shadow: 4px 4px 0 var(--header-shadow-color);
+  }
+  
+  .theme-light .footer__title {
+    text-shadow: 2px 2px 0 var(--header-shadow-color);
+  }
+}
+
+@media (prefers-color-scheme: light) and (max-width: 768px) {
+  .header__title,
+  .footer__title {
+    text-shadow: 4px 4px 0 var(--header-shadow-color);
+  }
+  
+  .footer__title {
+    text-shadow: 2px 2px 0 var(--header-shadow-color);
   }
 }

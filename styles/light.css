@@ -5,12 +5,41 @@
 */
 
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --color-decor: #FF8DCB;
+  --text-color-primary: #353430;
+  --title-color-primary: #FFC2E6;
+  --bg-color: #FFF1F7;
+  --paragraph-text-color: #353430;
+  --text-block-border: #353430;
+  --bg-image: url('../images/cover-image-light.png');
+  --decorated-zone: #353430;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-light .content__title, 
+.theme-light .header__theme-menu-button {
+  --color-decor: #353430;
+}
+
+.theme-light .header__rec {
+  display: none;
+}
+
+.theme-light footer {
+  --color-decor: #FF0070;
+}
+
+.theme-light .header__theme-menu-button:hover {
+  --header-hover-color: rgba(50, 49, 45, 0.4);
+  border: 1px solid var(--header-hover-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-decor: #FF8DCB;
+    --text-color-primary: #353430;
+    --title-color-primary: #FFC2E6;
+    --bg-color: #FFF1F7;
+    --paragraph-text-color: #353430;
+    --bg-image: url('../images/cover-image-light.png');
+  }
 }

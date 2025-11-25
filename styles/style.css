@@ -1,10 +1,9 @@
 header {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 20px 20px 0;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 20px;
   font-family: var(--main-font-family);
-  inline-size: 100%;
   min-block-size: 100vh;
 }
 
@@ -13,22 +12,22 @@ header {
   gap: 10px;
   list-style: none;
   justify-content: center;
-  align-self: center;
-  inline-size: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .header__theme-menu-button {
   display: block;
   position: relative;
-  border: 1px solid transparent;
+  border: none;
   background-color: transparent;
   text-transform: lowercase;
+  text-align: center;
+  font-size: var(--main-font-size);
   color: var(--color-decor);
   line-height: var(--main-font-size);
   cursor: pointer;
   appearance: none;
+  padding: 0 13px;
+  
 }
 
 .header__title {
@@ -37,13 +36,7 @@ header {
   text-shadow: 4px 4px 0 var(--color-decor);
   font-weight: 700;
   line-height: 83%;
-  margin-inline-end: auto;
-  margin-block-start: 273px;
-}
-
-.header__block-text {
-  max-inline-size: min(491px, 100%);
-  margin-inline-start: auto;
+  margin-inline-start: -20px;
 }
 
 .header__text {
@@ -51,7 +44,10 @@ header {
   font-weight: 700;
   line-height: var(--main-line-height);
   font-size: var(--main-font-size);
-  margin-top: 114px;
+  max-inline-size: 491px;
+  max-block-size: 71px;
+  align-self: center;
+  justify-self: end;
 }
 
 .title-decor {
@@ -235,12 +231,12 @@ main {
 }
 
 footer {
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 319px 276px 319px 277px;
+  padding: 20px;
   position: relative;
-  block-size: 100dvb;
+  min-block-size: 100vh;
 }
 
 .footer__title {
@@ -257,6 +253,7 @@ footer {
   background-position: center;
   background-image: var(--bg-image);
   background-attachment: fixed;
+  margin: 0 auto;
 }
 
 .decorated-zone::before,
@@ -329,32 +326,36 @@ footer {
     justify-content: center;
     margin-block-start: 172px;
   }
+
+  .header__theme-menu{
+    display: flex;
+    justify-content: end;
+  }
+
+  .header__text {
+    max-inline-size: 364px;
+    max-block-size: 117px;
+  }
+
 }
     
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   :root {
     --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .header__theme-menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    margin-block-start: 65px;
-  }
-
-  .header__rec {
+   .header__rec {
     inset-block-start: 20px;
     inset-inline-end: 20px;
   }
 
   .header__title {
-    margin-block-start: 65px;
+    margin-inline-start: 0;
   }
 
-  .header__block-text {
-    max-inline-size: 100%;
-    margin-block-start: 55px;
+  .header__text {
+    max-inline-size: 355px;
+    max-block-size: 117px;
   }
 
   main {
@@ -419,7 +420,9 @@ footer {
     grid-row: 5 / 6;
   }
 
-  footer {
-    padding: 286px 13px 285px 14px;
-  }
+  .footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  } 
 }

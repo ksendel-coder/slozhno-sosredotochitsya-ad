@@ -1,3 +1,12 @@
+.page {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0 auto;
+  background-image: var(--bg-image, --bg-color);
+  block-size: 100vh;
+}
+
 header {
   position: relative;
   display: grid;
@@ -247,15 +256,6 @@ footer {
   text-shadow: 2px 2px 0 var(--color-decor);
 }
 
-.page {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  margin: 0 auto;
-  background-image: var(--bg-image);
-  block-size: 100vh;
-}
-
 header, main, footer {
   background: inherit;
 }
@@ -331,7 +331,7 @@ header, main, footer {
     margin-block-start: 172px;
   }
 
-  .header__theme-menu{
+  .header__theme-menu {
     display: flex;
     justify-content: end;
   }

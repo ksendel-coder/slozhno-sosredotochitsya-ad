@@ -13,8 +13,8 @@ header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   padding: 20px;
-  min-block-size: 100vh;
   font-family: var(--main-font-family);
+  min-block-size: 100vh;
   font-size: var(--main-font-size);
 }
 

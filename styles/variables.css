@@ -4,10 +4,12 @@
   --main-line-height: 23.4px;
   --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --color-decor: #FF0070;
-  --text-color-primary:#F1B2CE;
+  --text-color-primary: #000028;
   --title-color-primary: #DB00FF;
   --bg-color: #000028;
   --paragraph-text-color: #F1B2CE;
   --text-block-border: #F1B2CE;
   --decorated-zone: #FF0070;
+  --bg-image: url('../images/cover-image-dark.png');
 }
+

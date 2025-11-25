@@ -4,16 +4,14 @@
   переключая тему
 */
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.theme-light):not(.theme-dark) {
-    --bg-color: #000028;
-    --text-color-primary: #000028;
-    --title-color-primary: #db00ff;
-    --color-decor: #ff0070;
-    --paragraph-text-color: #f1b2ce;
-    --decorated-zone: #ff0070;
-    --text-block-border: #f1b2ce;
-    --bg-image: url(../images/cover-image-dark.png);
-  }
+:root.theme-dark {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --text-color-primary: #000028;
+  --title-color-primary: #DB00FF;
+  --color-decor: #FF0070;
+  --paragraph-text-color: #F1B2CE;
+  --decorated-zone: #FF0070;
+  --text-block-border: #F1B2CE;
 }
 

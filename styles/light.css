@@ -8,7 +8,7 @@
   --color-decor: #FF8DCB;
   --text-color-primary: #353430;
   --title-color-primary: #FFC2E6;
-  --bg-color: #FFF1F7;
+  --bg-color: #F1B2CE;
   --paragraph-text-color: #353430;
   --text-block-border: #353430;
   --bg-image: url('../images/cover-image-light.png');
@@ -31,6 +31,11 @@
 .theme-light .header__theme-menu-button:hover {
   --header-hover-color: rgba(50, 49, 45, 0.4);
   border: 1px solid var(--header-hover-color);
+}
+
+.theme-light .page {
+  --bg-color: #F1B2CE;
+  --bg-image: url('../images/cover-image-light.png');
 }
 
 @media (prefers-color-scheme: light) {

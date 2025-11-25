@@ -3,8 +3,8 @@
   background-position: center;
   background-attachment: fixed;
   margin: 0 auto;
-  background-image: var(--bg-image, --bg-color);
-  block-size: 100vh;
+  background-image: var(--bg-image);
+  background-color: var(--bg-color);
 }
 
 header {
@@ -14,6 +14,7 @@ header {
   padding: 20px;
   font-family: var(--main-font-family);
   min-block-size: 100vh;
+  font-size: var(--main-font-size);
 }
 
 .header__theme-menu-list {
@@ -30,7 +31,6 @@ header {
   background-color: transparent;
   text-transform: lowercase;
   text-align: center;
-  font-size: var(--main-font-size);
   color: var(--color-decor);
   line-height: var(--main-font-size);
   cursor: pointer;
@@ -51,7 +51,6 @@ header {
   color: var(--text-color-primary);
   font-weight: 700;
   line-height: var(--main-line-height);
-  font-size: var(--main-font-size);
   max-inline-size: 491px;
   max-block-size: 71px;
   align-self: center;
@@ -100,29 +99,28 @@ main {
   column-gap: 19.93px;
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
-  grid-template-areas: 
-    "title multitask"
-    ". dopamine";
   align-items: start;
-  margin-inline-end: 0.19px;
 }
 
-.text-block {
-  inline-size: 100%;
-}
-
-.content__title {
-  grid-area: title;
+.why__difficult__concentrate .content__title {
+  grid-column: 1;
+  grid-row: 1;
   color: var(--color-decor);
   margin: 0;
 }
 
 .text-block_multitask {
-  grid-area: multitask;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .text-block_dopamine {
-  grid-area: dopamine;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.text-block {
+  inline-size: 100%;
 }
 
 .text-block__head {
@@ -146,22 +144,28 @@ main {
   gap: 20px;
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
-  grid-template-areas: 
-    "title . ."
-    "multitask food gadget";
   align-items: start;
 }
 
+.what__reduces__concentration .content__title {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--color-decor);
+}
+
 .text-block_multitask-second {
-  grid-area: multitask;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .text-block_food {
-  grid-area: food;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .text-block_gadget {
-  grid-area: gadget;
+  grid-column: 3;
+  grid-row: 2;
 }
 
 .how__concentrate__better {
@@ -170,18 +174,18 @@ main {
   gap: 20px;
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
-  grid-template-areas: 
-    "title text-block_five-just"
-    "title text-block_five-just"
-    ". text-block_five-just"
-    ". text-block_five-just"
-    ". text-block_five-just"
-    ". text-block_five-just";
   align-items: start;
 }
 
+.how__concentrate__better .content__title {
+  grid-column: 1;
+  grid-row: 1 / span 6;
+  color: var(--color-decor);
+}
+
 .text-block_five-just {
-  grid-area: text-block_five-just;
+  grid-column: 2;
+  grid-row: 1 / span 6;
 }
 
 .how__concentrate__better .text-block__head:first-of-type {
@@ -239,12 +243,12 @@ main {
 }
 
 footer {
+  min-block-size: 100vh;
+  padding: 20px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  position: relative;
-  min-block-size: 100vh;
 }
 
 .footer__title {
@@ -254,10 +258,6 @@ footer {
   line-height: 83%;
   color: var(--title-color-primary);
   text-shadow: 2px 2px 0 var(--color-decor);
-}
-
-header, main, footer {
-  background: inherit;
 }
 
 .decorated-zone::before,
@@ -341,6 +341,30 @@ header, main, footer {
     max-block-size: 117px;
   }
 
+  .what__reduces__concentration {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .what__reduces__concentration .content__title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .text-block_multitask-second {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .text-block_food {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .text-block_gadget {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }
     
 @media (max-width: 500px) {
@@ -348,11 +372,10 @@ header, main, footer {
     --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-   .header__rec {
-    inset-block-start: 20px;
-    inset-inline-end: 20px;
+  header {
+    padding: 10px;
   }
-
+  
   .header__title {
     margin-inline-start: 0;
   }
@@ -369,29 +392,62 @@ header, main, footer {
 
   .why__difficult__concentrate {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-      "title"
-      "multitask"
-      "dopamine";
     gap: 20px;
+  }
+  
+  .why__difficult__concentrate .content__title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .text-block_multitask {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .text-block_dopamine {
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .what__reduces__concentration {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-      "title"
-      "multitask"
-      "food"
-      "gadget";
     gap: 20px;
+  }
+  
+  .what__reduces__concentration .content__title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .text-block_multitask-second {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .text-block_food {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .text-block_gadget {
+    grid-column: 1;
+    grid-row: 4;
   }
 
   .how__concentrate__better {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-      "title"
-      "text-block_five-just";
     gap: 20px;
+  }
+  
+  .how__concentrate__better .content__title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .text-block_five-just {
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .grid {
@@ -400,28 +456,28 @@ header, main, footer {
   }
 
   .grid__image:nth-child(5) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .grid__image:nth-child(4) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .grid__image:nth-child(3) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .grid__image:nth-child(2) {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
+    grid-column: 1;
+    grid-row: 4;
   }
 
   .grid__image:nth-child(1) {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
+    grid-column: 1;
+    grid-row: 5;
   }
 
   .footer {

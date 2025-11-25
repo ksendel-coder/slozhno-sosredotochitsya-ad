@@ -1,14 +1,39 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
 :root {
-  --main-font-family: 'IBM Plex Mono', sans-serif;
-  --main-font-size: 18px;
-  --main-line-height: 23.4px;
-  --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --color-decor: #FF0070;
-  --text-color-primary:#F1B2CE;
-  --title-color-primary: #DB00FF;
-  --bg-color: #000028;
-  --paragraph-text-color: #F1B2CE;
-  --text-block-border: #F1B2CE;
-  --decorated-zone: #FF0070;
-}
+  --basic-pink: #FF8DCB;
+  --title-pink: #FFC2E6;
+  --almost-white-bg: #FFF1F7;
+  --real-red: #ff0070;
+  --approximately-black: #000028;
+  --almost-black: #353430;
 
+  --regular-font-size: 18px;
+  --regular-line-height: 1.3;
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --decoration-gap: 20px;
+  --min-height: 668px;
+  --header-margin-left: 0;
+  --project-font-family: "IBM Plex Mono", "Arial", sans-serif;
+  --corner-thickness: 1px;
+
+  /* Цветовые переменные по умолчанию (темная тема) */
+  --page-bg-color: var(--approximately-black);
+  --accent-color: var(--real-red);
+  --title-color: #db00ff;
+  --header-text-bg-color: var(--real-red);
+  --header-text-color: var(--approximately-black);
+  --question-color: var(--real-red);
+  --answer-title-bg-color: var(--real-red);
+  --answer-title-color: var(--approximately-black);
+  --answer-text-color: #f1b2ce;
+  --advice-title-bg-color: var(--real-red);
+  --advice-title-color: var(--approximately-black);
+  --button-color: var(--real-red);
+  --rec-color: var(--real-red);
+  --border-color-opacity: #FF007066;
+  --background-image: url("../images/cover-image-dark.png");
+  --deco-color: var(--real-red);
+}

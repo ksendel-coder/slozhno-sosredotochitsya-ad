@@ -5,6 +5,7 @@
   margin: 0 auto;
   background-image: var(--bg-image);
   background-color: var(--bg-color);
+  background-repeat: no-repeat;
 }
 
 header {
@@ -93,6 +94,10 @@ main {
   margin: 60px 20px;
 }
 
+.content__title {
+  color: var(--text-color-primary);
+}
+
 .why__difficult__concentrate {
   display: grid;
   grid-template-columns: clamp(276px, 30vw, 335px) 2fr;
@@ -125,7 +130,7 @@ main {
 
 .text-block__head {
   font-weight: 700;
-  color: #000028;
+  color: var(--text-color-primary);
   margin: 0;
 }
 

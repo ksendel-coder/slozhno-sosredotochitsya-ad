@@ -59,7 +59,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-decor: #353430;
+    --color-decor: #FF8DCB;
     --text-color-primary: #353430;
     --title-color-primary: #FFC2E6;
     --bg-color: #FFF1F7;

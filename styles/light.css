@@ -7,7 +7,7 @@
 
 /* Принудительная светлая тема с классом */
 :root.theme-light {
-  --color-decor: #353430;
+  --color-decor: #FF8DCB;
   --text-color-primary: #353430;
   --title-color-primary: #FFC2E6;
   --bg-color: #FFF1F7;
@@ -17,6 +17,7 @@
   --decorated-zone: #353430;
   --header-shadow-color: #FF8DCB;
   --footer-shadow-color: #FF0070;
+  --color-button: #353430;
 }
 
 .theme-light .content__title {

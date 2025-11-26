@@ -10,5 +10,5 @@
   --paragraph-text-color: #F1B2CE;
   --text-block-border: #F1B2CE;
   --decorated-zone: #FF0070;
-  --bg-image: url('../images/cover-image-dark.png');
+  background-image: url('../images/cover-image-dark.png');
 }

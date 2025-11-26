@@ -3,7 +3,7 @@
   background-position: center;
   background-attachment: fixed;
   margin: 0 auto;
-  background-image: var(--bg-image, --bg-color);
+  background-image: url('../images/cover-image-dark.png');
   block-size: 100vh;
 }
 

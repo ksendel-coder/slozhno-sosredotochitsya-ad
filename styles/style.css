@@ -5,6 +5,7 @@
   margin: 0 auto;
   block-size: 100vh;
   background-color: var(--bg-color);
+  background-image: var(--bg-image);
 }
 
 header {

@@ -4,6 +4,8 @@
   переключая тему
 */
 
+
+/* Принудительная светлая тема с классом */
 :root.theme-light {
   --color-decor: #353430;
   --text-color-primary: #353430;
@@ -49,8 +51,32 @@
   border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
-.theme-light .page {
-  --bg-image: url('../images/cover-image-light.png');
+/* УБРАТЬ эту строку - она создает цикл */
+/* .theme-light .page {
+  --bg-color: var(--bg-color);
+} */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-decor: #353430;
+    --text-color-primary: #353430;
+    --title-color-primary: #FFC2E6;
+    --bg-color: #FFF1F7;
+    --paragraph-text-color: #353430;
+    --text-block-border: #353430;
+    --bg-image: url('../images/cover-image-light.png');
+    --decorated-zone: #353430;
+    --header-shadow-color: #FF8DCB;
+    --footer-shadow-color: #FF0070;
+  }
+
+  .header__rec {
+    display: none;
+  }
+
+  .header__rec::after {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {

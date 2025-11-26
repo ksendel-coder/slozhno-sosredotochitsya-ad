@@ -4,7 +4,7 @@
   переключая тему
 */
 
-.theme-dark .page {
+:root.theme-dark {
   --color-decor: #FF0070;
   --text-color-primary: #000028;
   --title-color-primary: #DB00FF;
@@ -13,17 +13,4 @@
   --text-block-border: #F1B2CE;
   --decorated-zone: #FF0070;
   --bg-image: url('../images/cover-image-dark.png');
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-decor: #FF0070;
-    --text-color-primary: #000028;
-    --title-color-primary: #DB00FF;
-    --bg-color: #000028;
-    --paragraph-text-color: #F1B2CE;
-    --text-block-border: #F1B2CE;
-    --decorated-zone: #FF0070;
-    --bg-image: url('../images/cover-image-dark.png');
-  }
 }

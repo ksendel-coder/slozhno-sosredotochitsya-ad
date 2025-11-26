@@ -1,5 +1,5 @@
 :root.theme-light {
-  --section__title: #353430;
+  --content-title: #353430;
   --title-color: #353430;
   --accent-color: #ff8dcb;
   --text-color: #353430;
@@ -26,10 +26,4 @@
     --button-focus-color: #353430;
     --background-color: #fff1f7;
   }
-}
-
-@media (width >= 1024px) {
-    .footer__title {
-      text-shadow: 2px 2px 0 #ff0070;
-    }
 }

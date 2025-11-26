@@ -3,8 +3,8 @@
   background-position: center;
   background-attachment: fixed;
   margin: 0 auto;
-  background-image: var(--bg-image);
   block-size: 100vh;
+  background-color: var(--bg-color);
 }
 
 header {

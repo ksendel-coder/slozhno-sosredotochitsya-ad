@@ -13,5 +13,8 @@
   --text-block-border: #F1B2CE;
   --decorated-zone: #FF0070;
   --color-button: #FF0070;
-  --bg-image: url('../images/cover-image-dark.png');
+}
+
+.theme-dark .page {
+  background-image: url('../images/cover-image-dark.png');
 }

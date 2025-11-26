@@ -52,10 +52,9 @@
   border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
-/* УБРАТЬ эту строку - она создает цикл */
-/* .theme-light .page {
-  --bg-color: var(--bg-color);
-} */
+.theme-light .page {
+  background-image: url('../images/cover-image-light.png');
+}
 
 @media (prefers-color-scheme: light) {
   :root {

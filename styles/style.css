@@ -4,7 +4,6 @@
   background-attachment: fixed;
   margin: 0 auto;
   background-color: var(--bg-color);
-  background-image: var(--bg-image);
 }
 
 header {

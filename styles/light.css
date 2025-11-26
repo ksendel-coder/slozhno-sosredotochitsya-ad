@@ -11,7 +11,7 @@
   --bg-color: #FFF1F7;
   --paragraph-text-color: #353430;
   --text-block-border: #353430;
-  background-image: url('../images/cover-image-light.png');
+  --bg-image: url('../images/cover-image-light.png');
   --decorated-zone: #353430;
   --header-shadow-color: #FF8DCB;
   --footer-shadow-color: #FF0070;
@@ -50,7 +50,7 @@
 }
 
 .theme-light .page {
-  background-image: url('../images/cover-image-light.png');
+  bg-image: url('../images/cover-image-light.png');
 }
 
 @media (max-width: 768px) {

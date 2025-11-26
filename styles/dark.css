@@ -5,16 +5,16 @@
 */
 
 :root.theme-dark {
-  --color-decor: #FF0070;
+  --color-decor: #ff0070;
   --text-color-primary: #000028;
-  --title-color-primary: #DB00FF;
+  --title-color-primary: #db00ff;
   --bg-color: #000028;
-  --paragraph-text-color: #F1B2CE;
-  --text-block-border: #F1B2CE;
-  --decorated-zone: #FF0070;
-  --color-button: #FF0070;
+  --paragraph-text-color: #f1b2ce;
+  --text-block-border: #f1b2ce;
+  --decorated-zone: #ff0070;
+  --color-button: #ff0070;
 }
 
 .theme-dark .page {
-  background-image: url('../images/cover-image-dark.png');
+  background-image: url("../images/cover-image-dark.png");
 }

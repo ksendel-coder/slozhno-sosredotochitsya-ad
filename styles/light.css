@@ -4,19 +4,18 @@
   переключая тему
 */
 
-
 /* Принудительная светлая тема с классом */
 :root.theme-light {
-  --color-decor: #FF8DCB;
+  --color-decor: #ff8dcb;
   --text-color-primary: #353430;
-  --title-color-primary: #FFC2E6;
-  --bg-color: #FFF1F7;
+  --title-color-primary: #ffc2e6;
+  --bg-color: #fff1f7;
   --paragraph-text-color: #353430;
   --text-block-border: #353430;
-  --bg-image: url('../images/cover-image-light.png');
+  --bg-image: url("../images/cover-image-light.png");
   --decorated-zone: #353430;
-  --header-shadow-color: #FF8DCB;
-  --footer-shadow-color: #FF0070;
+  --header-shadow-color: #ff8dcb;
+  --footer-shadow-color: #ff0070;
   --color-button: #353430;
 }
 
@@ -25,7 +24,7 @@
 }
 
 .theme-light .title-decor {
-  background-color: #FF8DCB;
+  background-color: #ff8dcb;
 }
 
 .theme-light .header__title {
@@ -37,7 +36,7 @@
 }
 
 .theme-light .text-block__link {
-  text-shadow: 2px 2px 0 #FF8DCB;
+  text-shadow: 2px 2px 0 #ff8dcb;
 }
 
 .theme-light .header__rec {
@@ -53,39 +52,5 @@
 }
 
 .theme-light .page {
-  background-image: url('../images/cover-image-light.png');
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-decor: #FF8DCB;
-    --text-color-primary: #353430;
-    --title-color-primary: #FFC2E6;
-    --bg-color: #FFF1F7;
-    --paragraph-text-color: #353430;
-    --text-block-border: #353430;
-    --bg-image: url('../images/cover-image-light.png');
-    --decorated-zone: #353430;
-    --header-shadow-color: #FF8DCB;
-    --footer-shadow-color: #FF0070;
-  }
-
-  .header__rec {
-    display: none;
-  }
-
-  .header__rec::after {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .theme-light .header__title,
-  .theme-light .footer__title {
-    text-shadow: 4px 4px 0 var(--header-shadow-color);
-  }
-  
-  .theme-light .footer__title {
-    text-shadow: 2px 2px 0 var(--header-shadow-color);
-  }
+  background-image: url("../images/cover-image-light.png");
 }

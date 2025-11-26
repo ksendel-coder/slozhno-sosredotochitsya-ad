@@ -52,7 +52,6 @@ header {
   line-height: var(--main-line-height);
   font-size: var(--main-font-size);
   max-inline-size: 491px;
-  max-block-size: 71px;
   align-self: center;
   justify-self: end;
 }
@@ -75,7 +74,7 @@ header {
 }
 
 .header__rec::after {
-  content: '';
+  content: "";
   display: block;
   inline-size: 9px;
   block-size: 9px;
@@ -266,13 +265,15 @@ footer {
   text-shadow: 2px 2px 0 var(--color-decor);
 }
 
-header, main, footer {
+header,
+main,
+footer {
   background: inherit;
 }
 
 .decorated-zone::before,
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
@@ -298,7 +299,7 @@ header, main, footer {
 }
 
 .header__theme-menu-button:focus-visible::after {
-  content: '';
+  content: "";
   position: absolute;
   inline-size: 100%;
   block-size: 1px;
@@ -329,6 +330,7 @@ header, main, footer {
   border-block-end: 1px solid var(--text-block-border);
 }
 
+/* Fixed breakpoint for tablet - applies to screens 768px and smaller */
 @media (max-width: 768px) {
   :root {
     --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -348,36 +350,36 @@ header, main, footer {
 
   .header__text {
     max-inline-size: 364px;
-    max-block-size: 117px; 
   }
 
   .what__reduces__concentration {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-  
+
   .what__reduces__concentration .content__title {
     grid-column: 1;
     grid-row: 1;
   }
-  
+
   .text-block_multitask-second {
     grid-column: 1;
     grid-row: 2;
   }
-  
+
   .text-block_food {
     grid-column: 1;
     grid-row: 3;
   }
-  
+
   .text-block_gadget {
     grid-column: 1;
     grid-row: 4;
   }
 }
 
-@media (max-width: 500px) { /* Более стандартный брейкпоинт */
+/* Fixed breakpoint for mobile - changed from 500px to 767px to properly apply on 375px screens */
+@media (max-width: 767px) {
   :root {
     --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
@@ -397,7 +399,6 @@ header, main, footer {
 
   .header__text {
     max-inline-size: 355px;
-    max-block-size: 117px; /* Разрешить адаптацию */
   }
 
   main {
@@ -405,22 +406,21 @@ header, main, footer {
     gap: 50px;
   }
 
-  /* Упрощенные grid */
   .why__difficult__concentrate {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .why__difficult__concentrate .content__title {
     grid-column: 1;
     grid-row: 1;
   }
-  
+
   .text-block_multitask {
     grid-column: 1;
     grid-row: 2;
   }
-  
+
   .text-block_dopamine {
     grid-column: 1;
     grid-row: 3;
@@ -430,22 +430,22 @@ header, main, footer {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .what__reduces__concentration .content__title {
     grid-column: 1;
     grid-row: 1;
   }
-  
+
   .text-block_multitask-second {
     grid-column: 1;
     grid-row: 2;
   }
-  
+
   .text-block_food {
     grid-column: 1;
     grid-row: 3;
   }
-  
+
   .text-block_gadget {
     grid-column: 1;
     grid-row: 4;
@@ -455,12 +455,12 @@ header, main, footer {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .how__concentrate__better .content__title {
     grid-column: 1;
     grid-row: 1;
   }
-  
+
   .text-block_five-just {
     grid-column: 1;
     grid-row: 2;
